@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres
+    container_name: db_postgres
+    environment:
+      POSTGRES_PASSWORD: test
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./src:/src
+    working_dir: /src
+ 
+  db-ui:
+    image: adminer
+    container_name: db_ui_adminer
+    restart: always
+    ports:
+      - 8080:8080
+    
+volumes:
+  postgres_data:
