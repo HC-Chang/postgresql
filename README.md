@@ -9,7 +9,7 @@ $docker-compose up -d
 
 ```
 
-# find postgresql docker
+# Get into postgresql container
 ```bash
 $docker exec -it db_postgres /bin/bash
 ```
