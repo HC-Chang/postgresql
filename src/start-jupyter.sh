@@ -2,7 +2,7 @@
 
 function set_env() {
     apt update
-    apt install jupyter-notebook vim -y
+    apt install jupyter-notebook vim net-tools -y
 }
 
 function start_jupyter() {
